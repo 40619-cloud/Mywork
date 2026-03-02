@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phatthalung Cafe Guide - แนะนำคาเฟ่พัทลุง</title>
+    <title>Brew & Bliss Phatthalung</title>
     <style>
-        /* CSS การตั้งค่าพื้นฐาน */
+        /* CSS Settings */
         :root {
             --primary-brown: #5d4037;
             --light-cream: #f5efe6;
@@ -14,7 +14,7 @@
         }
 
         body {
-            font-family: 'Tahoma', sans-serif;
+            font-family: 'Segoe UI', Tahoma, 'Microsoft Sans Serif', sans-serif;
             background-color: var(--light-cream);
             color: var(--text-dark);
             margin: 0;
@@ -22,29 +22,32 @@
             line-height: 1.6;
         }
 
-        /* ส่วนหัวและเมนูนำทาง */
+        /* Header & Navigation */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 50px;
+            padding: 25px 50px;
             background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: bold;
             color: var(--primary-brown);
+            flex: 1; /* ดันส่วนอื่นไปทางขวา */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px; /* ระยะห่างระหว่างเมนู */
         }
 
         nav a {
             text-decoration: none;
             color: var(--text-dark);
-            margin: 0 15px;
             font-weight: 500;
             transition: 0.3s;
         }
@@ -53,39 +56,42 @@
             color: var(--primary-brown);
         }
 
-        .btn-booking {
+        .btn-contact {
             background-color: var(--primary-brown);
             color: white;
-            padding: 10px 25px;
+            padding: 10px 22px;
             border-radius: 25px;
             text-decoration: none;
+            margin-left: 20px; /* เว้นระยะจากชื่อคาเฟ่สุดท้าย */
         }
 
-        /* Hero Section (หน้าปก) */
+        /* Hero Section */
         .hero {
             display: flex;
             align-items: center;
-            padding: 60px 50px;
+            padding: 80px 50px;
             background-color: var(--accent-yellow);
-            border-radius: 0 0 80px 80px;
-            min-height: 450px;
+            border-radius: 0 0 60px 60px;
+            min-height: 500px;
         }
 
         .hero-text {
             flex: 1;
+            padding-right: 40px;
         }
 
         .hero-text h1 {
-            font-size: 3.5rem;
+            font-size: 4.5rem;
             margin: 0;
+            line-height: 1;
             color: var(--primary-brown);
-            line-height: 1.1;
         }
 
         .hero-text p {
-            font-size: 1.2rem;
-            margin-top: 20px;
-            max-width: 500px;
+            font-size: 1.3rem;
+            margin-top: 25px;
+            color: #555;
+            max-width: 550px;
         }
 
         .hero-image {
@@ -94,146 +100,90 @@
         }
 
         .hero-image img {
-            width: 85%;
+            width: 90%;
             border-radius: 30px;
-            box-shadow: 15px 15px 0px var(--primary-brown);
+            box-shadow: 25px 25px 0px var(--primary-brown);
         }
 
-        /* ส่วนแนะนำคาเฟ่ (ตาราง 4 ช่องตามรูป) */
-        .cafe-section {
-            padding: 80px 50px;
+        /* Intro Section (แทนที่ส่วนการ์ดคาเฟ่เดิม) */
+        .intro-section {
+            padding: 100px 50px;
             text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .cafe-section h2 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .cafe-card {
-            background: white;
-            padding: 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            color: inherit;
-            transition: 0.4s;
-            border: 1px solid #eee;
-        }
-
-        .cafe-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .cafe-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 20px;
-            margin-bottom: 15px;
-        }
-
-        .cafe-card h3 {
-            margin: 10px 0;
+        .intro-section h2 {
+            font-size: 2.5rem;
             color: var(--primary-brown);
+            margin-bottom: 30px;
         }
 
-        /* ส่วนท้าย (Contact) */
-        .footer-info {
-            background-color: #ede0d4;
-            padding: 60px 50px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+        .intro-section p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
         }
 
-        .footer-info h3 { border-bottom: 2px solid var(--primary-brown); display: inline-block; padding-bottom: 5px; }
-
-        .copyright {
-            text-align: center;
-            padding: 20px;
+        /* Footer */
+        .footer-minimal {
+            border-top: 1px solid #ddd;
+            padding: 40px 50px;
+            display: flex;
+            justify-content: space-between;
             background: #fff;
-            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+
+        .footer-minimal div {
+            flex: 1;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">Phatthalung Cafe</div>
+        <div class="logo">Phatthalung Café Guide</div>
         <nav>
             <a href="index.html">หน้าหลัก</a>
-            <a href="the-p.html">1. The.p</a>
-            <a href="kiri.html">2. Kiri</a>
-            <a href="lemon-thyme.html">3. Lemon Thyme</a>
-            <a href="drink-it.html">4. Drink it</a>
+            <a href="the-p.html">The.p</a>
+            <a href="kiri.html">Kiri</a>
+            <a href="lemon-thyme.html">Lemon Thyme</a>
+            <a href="drink-it.html">Drink it</a>
+            <a href="#" class="btn-contact">ติดต่อสอบถาม</a>
         </nav>
-        <a href="#" class="btn-booking">ติดต่อสอบถาม</a>
     </header>
 
     <section class="hero">
         <div class="hero-text">
-            <h1>Brew & Bliss<br>ในพัทลุง</h1>
-            <p>ยินดีต้อนรับสู่หน้ารวบรวมคาเฟ่สุดชิคในจังหวัดพัทลุง ที่เราคัดสรรมาให้คุณได้ไปตามรอย ไม่ว่าจะเป็นสายถ่ายรูป หรือคอกาแฟตัวจริง</p>
+            <h1>Brew & <br>Bliss<br>Phatthalung</h1>
+            <p>สัมผัสเสน่ห์ของเมืองลุงผ่านแก้วกาแฟโปรดของคุณ เราได้รวบรวมร้านกาแฟที่ดีที่สุดเพื่อเติมเต็มวันหยุดที่แสนพิเศษ</p>
         </div>
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1507133750040-4a8f5700817f?auto=format&fit=crop&w=800&q=80" alt="Cafe Phatthalung">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Coffee Cup">
         </div>
     </section>
 
-    <section class="cafe-section">
-        <h2>ค้นพบคาเฟ่ที่คุณชอบ</h2>
-        <div class="grid-container">
-            <a href="the-p.html" class="cafe-card">
-                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=500" alt="The.p">
-                <h3>1. The.p</h3>
-                <p>คาเฟ่สไตล์มินิมอล ตกแต่งสวยงามลงตัว</p>
-            </a>
-            <a href="kiri.html" class="cafe-card">
-                <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=500" alt="Kiri">
-                <h3>2. Kiri</h3>
-                <p>สัมผัสบรรยากาศเขาอกทะลุและธรรมชาติ</p>
-            </a>
-            <a href="lemon-thyme.html" class="cafe-card">
-                <img src="https://images.unsplash.com/photo-1511081692775-05d0f180a065?w=500" alt="Lemon Thyme">
-                <h3>3. Lemon Thyme</h3>
-                <p>เมนูเบเกอรี่โฮมเมดและเครื่องดื่มสุดสดชื่น</p>
-            </a>
-            <a href="drink-it.html" class="cafe-card">
-                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500" alt="Drink it">
-                <h3>4. Drink it</h3>
-                <p>แหล่งรวมเครื่องดื่มรสชาติเยี่ยมใจกลางเมือง</p>
-            </a>
-        </div>
+    <section class="intro-section">
+        <h2>เสน่ห์คาเฟ่แห่งเมืองพัทลุง</h2>
+        <p>จังหวัดพัทลุงไม่ได้มีดีแค่ธรรมชาติและนาข้าว แต่ยังมีวัฒนธรรมการดื่มกาแฟที่น่าหลงใหล ตั้งแต่คาเฟ่สไตล์มินิมอลกลางเมือง ไปจนถึงร้านกาแฟริมเขาล้อมรอบด้วยทิวทัศน์ที่สวยงาม</p>
+        <p>เราขอเชิญคุณร่วมเดินทางสำรวจ 4 ร้านคาเฟ่ที่เราคัดสรรมาแล้วว่า "ต้องห้ามพลาด" ไม่ว่าจะเป็นรสชาติของเมล็ดกาแฟที่พิถีพิถัน หรือมุมถ่ายรูปสุดชิคที่รับรองว่าคุณจะได้ภาพสวยๆ กลับไปอย่างแน่นอน</p>
+        <p style="font-weight: bold; color: var(--primary-brown); margin-top: 40px;">เลือกร้านที่คุณสนใจได้จากเมนูด้านบน เพื่อเริ่มต้นการเดินทาง...</p>
     </section>
 
-    <section class="footer-info">
+    <footer class="footer-minimal">
         <div>
-            <h3>ข้อมูลติดต่อ</h3>
-            <p>แนะนำสถานที่ท่องเที่ยวและคาเฟ่พัทลุง</p>
-            <p>อีเมล: info@phatthalungcafe.com</p>
+            <strong>Phatthalung Café</strong><br>
+            แหล่งรวมคาเฟ่ที่ดีที่สุดในพัทลุง
         </div>
-        <div>
-            <h3>เวลาเปิดทำการทั่วไป</h3>
-            <p>จันทร์ - ศุกร์: 09:00 - 18:00 น.</p>
-            <p>เสาร์ - อาทิตย์: 08:30 - 20:00 น.</p>
+        <div style="text-align: center;">
+            &copy; 2026 Cafe Exploration Guide
         </div>
-        <div>
-            <h3>ที่ตั้ง</h3>
-            <p>อำเภอเมือง, จังหวัดพัทลุง</p>
-            <p>ประเทศไทย 93000</p>
+        <div style="text-align: right;">
+            <a href="#" style="color: inherit; text-decoration: none;">Facebook</a> | 
+            <a href="#" style="color: inherit; text-decoration: none;">Instagram</a>
         </div>
-    </section>
-
-    <div class="copyright">
-        &copy; 2024 แนะนำคาเฟ่พัทลุง - พัฒนาเพื่อการเรียนรู้ HTML/CSS
-    </div>
+    </footer>
 
 </body>
 </html>
