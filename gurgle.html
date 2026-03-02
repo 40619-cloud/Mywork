@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GURGLE - Phatthalung Cafe</title>
+    <style>
+        /* CSS ชุดเดิมเพื่อความต่อเนื่องของดีไซน์ */
+        :root {
+            --primary-brown: #5d4037;
+            --light-cream: #f5efe6;
+            --accent-yellow: #e6ccb2;
+            --text-dark: #3e2723;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--light-cream);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary-brown); flex: 1; }
+        nav { display: flex; align-items: center; gap: 25px; }
+        nav a { text-decoration: none; color: var(--text-dark); font-weight: 500; }
+        .btn-contact { background-color: var(--primary-brown); color: white; padding: 10px 22px; border-radius: 25px; text-decoration: none; margin-left: 20px; }
+
+        /* Cafe Content Section */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .cafe-title {
+            font-size: 3.5rem;
+            color: var(--primary-brown);
+            margin-bottom: 10px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        /* การจัดวางรูปภาพแบบสลับตำแหน่ง (Asymmetric) */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .img-left {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 30px;
+            margin-top: 100px; /* ดันลงมาให้เหลื่อม */
+        }
+
+        .img-right {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+        .img-bottom {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 30px;
+            margin: 40px auto;
+            display: block;
+        }
+
+        /* ข้อมูลรายละเอียด */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+            background: white;
+            padding: 45px;
+            border-radius: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .info-box h3 {
+            color: var(--primary-brown);
+            border-bottom: 2px solid var(--accent-yellow);
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: var(--primary-brown);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Phatthalung Café Guide</div>
+        <nav>
+            <a href="index.html">หน้าหลัก</a>
+            <a href="the-p.html">The.p</a>
+            <a href="gurgle.html" style="color: var(--primary-brown);">GURGLE</a>
+            <a href="lemon-thyme.html">Lemon Thyme</a>
+            <a href="drink-it.html">Drink it</a>
+            <a href="#" class="btn-contact">ติดต่อสอบถาม</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="cafe-title">GURGLE</h1>
+        <p style="text-align: center; font-size: 1.2rem; color: #777;">"Refreshing vibes and artisanal brews"</p>
+
+        <div class="image-gallery">
+            <img src="https://images.unsplash.com/photo-1559925393-8be0ec41b595?w=600" alt="Gurgle 1" class="img-left">
+            <img src="https://images.unsplash.com/photo-1461023233414-18b4f4b05499?w=800" alt="Gurgle 2" class="img-right">
+        </div>
+        
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1000" alt="Gurgle Signature" class="img-bottom">
+
+        <div class="content-grid">
+            <div class="description">
+                <div class="info-box">
+                    <h3>แนะนำร้าน</h3>
+                    <p>GURGLE เป็นคาเฟ่สุดคูลที่เน้นความสดชื่นตามชื่อร้าน (เสียงน้ำไหล) ตกแต่งด้วยสไตล์โมเดิร์นลอฟท์ผสมผสานกับพื้นที่สีเขียว ร้านนี้โดดเด่นเรื่องเมนูเครื่องดื่มสุดสร้างสรรค์ โดยเฉพาะ Specialty Coffee และน้ำผลไม้สกัดเย็นที่ช่วยเติมพลังในวันร้อนๆ ของพัทลุงได้เป็นอย่างดี</p>
+                </div>
+                <div class="info-box" style="margin-top: 30px;">
+                    <h3>ตำแหน่งที่ตั้ง</h3>
+                    <p>ย่านเมืองเก่าพัทลุง ต.คูหาสวรรค์ อ.เมือง จ.พัทลุง <br> (ใกล้จุดเช็คอินสตรีทอาร์ทพัทลุง)</p>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="info-box">
+                    <h3>เวลาเปิด - ปิด</h3>
+                    <p>วันอังคาร - วันอาทิตย์ (ปิดวันจันทร์)<br>
+                       09:00 - 18:30 น.</p>
+                </div>
+                <div class="info-box" style="margin-top: 30px;">
+                    <h3>ช่องทางติดตาม</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook: Gurgle Cafe & Roaster</a><br>
+                        <a href="#">Instagram: @gurgle.ptl</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 GURGLE Phatthalung. All rights reserved.
+    </footer>
+
+</body>
+</html>
