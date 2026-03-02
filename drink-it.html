@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink it - Phatthalung Cafe</title>
+    <style>
+        /* CSS ชุดเดิมเพื่อความต่อเนื่อง */
+        :root {
+            --primary-brown: #5d4037;
+            --light-cream: #f5efe6;
+            --accent-yellow: #e6ccb2;
+            --text-dark: #3e2723;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--light-cream);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary-brown); flex: 1; }
+        nav { display: flex; align-items: center; gap: 25px; }
+        nav a { text-decoration: none; color: var(--text-dark); font-weight: 500; }
+        .btn-contact { background-color: var(--primary-brown); color: white; padding: 10px 22px; border-radius: 25px; text-decoration: none; margin-left: 20px; }
+
+        /* Container Content */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .cafe-title {
+            font-size: 3.5rem;
+            color: var(--primary-brown);
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* Image Gallery แบบเหลื่อมกัน (สไตล์รูปใหญ่ฝั่งซ้าย) */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .img-large-left {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+        .img-small-right {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 30px;
+            margin-top: 150px; /* เลื่อนลงมาให้เหลื่อม */
+        }
+
+        .img-full {
+            width: 100%;
+            max-width: 900px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 30px;
+            margin: 30px auto;
+            display: block;
+        }
+
+        /* Information Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            margin-top: 50px;
+            background: white;
+            padding: 45px;
+            border-radius: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .info-box h3 {
+            color: var(--primary-brown);
+            border-bottom: 2px solid var(--accent-yellow);
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: var(--primary-brown);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Phatthalung Café Guide</div>
+        <nav>
+            <a href="index.html">หน้าหลัก</a>
+            <a href="the-p.html">The.p</a>
+            <a href="gurgle.html">GURGLE</a>
+            <a href="lemon-thyme.html">Lemon Thyme</a>
+            <a href="drink-it.html" style="color: var(--primary-brown);">Drink it</a>
+            <a href="#" class="btn-contact">ติดต่อสอบถาม</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="cafe-title">Drink it</h1>
+        <p style="text-align: center; font-size: 1.2rem; color: #555;">"Every sip tells a story, Just Drink It!"</p>
+
+        <div class="image-gallery">
+            <img src="https://images.unsplash.com/photo-1541167760496-162955ed8a9f?w=800" alt="Drink it 1" class="img-large-left">
+            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600" alt="Drink it 2" class="img-small-right">
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1572288651183-214453734211?w=1000" alt="Drink it 3" class="img-full">
+
+        <div class="content-grid">
+            <div class="description">
+                <div class="info-box">
+                    <h3>แนะนำร้าน</h3>
+                    <p>Drink it เป็นร้านเครื่องดื่มยอดนิยมที่ตอบโจทย์คนรุ่นใหม่ด้วยเมนูที่หลากหลาย ตั้งแต่กาแฟรสเข้มข้น ชานมไข่มุกพรีเมียม ไปจนถึงอิตาเลียนโซดาสีสันสดใส ร้านตกแต่งด้วยสไตล์โมเดิร์น มีพื้นที่นั่งสบายๆ เหมาะสำหรับการพบปะสังสรรค์หรือแวะมาเติมพลังระหว่างวันด้วยเครื่องดื่มแก้วโปรด</p>
+                </div>
+                <div class="info-box" style="margin-top: 30px;">
+                    <h3>ตำแหน่งที่ตั้ง</h3>
+                    <p>ถนนราเมศวร์ ต.คูหาสวรรค์ อ.เมือง จ.พัทลุง <br> (ใกล้กับสถานีรถไฟพัทลุง)</p>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="info-box">
+                    <h3>เวลาเปิด - ปิด</h3>
+                    <p>เปิดบริการทุกวัน<br>
+                       08:00 - 20:00 น.</p>
+                </div>
+                <div class="info-box" style="margin-top: 30px;">
+                    <h3>ช่องทางติดตาม</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook: Drink it Cafe Phatthalung</a><br>
+                        <a href="#">Instagram: @drinkit.official</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Drink it Cafe Phatthalung. All rights reserved.
+    </footer>
+
+</body>
+</html>
